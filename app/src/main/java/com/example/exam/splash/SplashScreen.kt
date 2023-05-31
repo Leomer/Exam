@@ -1,4 +1,4 @@
-package com.example.exam
+package com.example.exam.splash
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -12,7 +12,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
-import com.example.exam.navegation.AppScreens
+import com.example.exam.R
+import com.example.exam.navigation.AppScreens
 import kotlinx.coroutines.delay
 
 @Composable
@@ -22,7 +23,7 @@ fun SplashScreen(navController: NavHostController) {
         delay(3000)
 
         navController.popBackStack()
-        navController.navigate(AppScreens.FirstScreen.route)
+        navController.navigate(AppScreens.HomeScreen.route)
 
     }
 

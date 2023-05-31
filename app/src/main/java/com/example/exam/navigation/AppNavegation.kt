@@ -1,14 +1,14 @@
-package com.example.exam.navegation
+package com.example.exam.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.exam.MainScreen
-import com.example.exam.SplashScreen
+import com.example.exam.screens.HomeScreen
+import com.example.exam.splash.SplashScreen
 
 @Composable
-fun AppNavegation() {
+fun AppNavigation() {
     val navController = rememberNavController()
     
     NavHost(navController = navController, startDestination = AppScreens.SplashScreen.route) {
@@ -16,8 +16,8 @@ fun AppNavegation() {
             SplashScreen(navController)
         }
 
-        composable(AppScreens.FirstScreen.route) {
-            MainScreen()
+        composable(AppScreens.HomeScreen.route) {
+            HomeScreen()
         }
     }
 
